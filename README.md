@@ -8,13 +8,11 @@ This repo provides the ETL pipeline, to populate the sparkifydb database in AWS 
 
 ## Why Redshift?
 --- 
-* Redshift is a fully managed, cloud-based, petabyte-scale data warehouse service by Amazon Web Services (AWS). It is an efficient solution to collect and store all data and enables analysis using various business intelligence tools to acquire new insights for businesses and their customers.  
-![Redshift](screenshots/redshift.PNG) 
+* Redshift is a fully managed, cloud-based, petabyte-scale data warehouse service by Amazon Web Services (AWS). It is an efficient solution to collect and store all data and enables analysis using various business intelligence tools to acquire new insights for businesses and their customers.   
 
 ## Database Design
 ---
 * For the schema design, the STAR schema is used as it simplifies queries and provides fast aggregations of data.
-![Schema](screenshots/schema.PNG)
 
 * songplays is our facts table with the rest being our dimension tables.
 
@@ -26,7 +24,6 @@ This repo provides the ETL pipeline, to populate the sparkifydb database in AWS 
 * First, we load song and log data from JSON format in S3 into our staging tables (staging_songs_table and staging_events_table)
 
 * Next, we perform ETL using SQL, from the staging tables to our fact and dimension tables. Below shows the architectural design of this pipeline:
-![architecture](screenshots/architecture.PNG)
 
 ## Files
 ---
